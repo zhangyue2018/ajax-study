@@ -25,6 +25,14 @@ app.all('/json-server', function(req, res) {
     res.send(JSON.stringify(obj));
 });
 
+app.all('/timeout', function(req, res) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Headers', '*');
+    setTimeout(() => {
+        res.send('hello world~~~');
+    }, 3000);
+});
+
 app.listen('8000', () => {
     console.log('服务已经启动，8000 端口监听中……');
 });
