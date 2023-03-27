@@ -22,6 +22,8 @@
             const xhr = new XMLHttpRequest();
             // 2.初始化 设置类型与url
             xhr.open('POST', 'http://127.0.0.1:8000/server');
+            // 设置请求头
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencode');
             // 3.发送
             xhr.send('a=100&b=200&c=300');
             // 4.事件绑定

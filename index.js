@@ -11,8 +11,9 @@ app.get('/server', (req, res) => {
     res.send('HELLO AJAX');
 });
 
-app.post('/server', (req, res) => {
+app.all('/server', (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Headers', '*');
     res.send('HELLO POST~~~');
 });
 
