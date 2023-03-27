@@ -30,7 +30,7 @@ app.all('/timeout', function(req, res) {
     res.setHeader('Access-Control-Allow-Headers', '*');
     setTimeout(() => {
         res.send('hello world~~~');
-    }, 3000);
+    }, 7000);
 });
 
 app.listen('8000', () => {
