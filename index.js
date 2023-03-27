@@ -17,6 +17,13 @@ app.all('/server', (req, res) => {
     res.send('HELLO POST~~~');
 });
 
+app.all('/json-server', function(req, res) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Headers', '*');
+    let obj = {a: 12, b:22}
+    res.send(JSON.stringify(obj));
+});
+
 app.listen('8000', () => {
     console.log('服务已经启动，8000 端口监听中……');
 });
