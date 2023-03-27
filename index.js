@@ -20,6 +20,7 @@ app.all('/server', (req, res) => {
 app.all('/json-server', function(req, res) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Headers', '*');
+    console.log('----------');
     let obj = {a: 12, b:22}
     res.send(JSON.stringify(obj));
 });
