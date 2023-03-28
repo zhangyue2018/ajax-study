@@ -43,6 +43,16 @@ app.all('/juery-server', function(req, res) {
     }, 5000);
 });
 
+app.all('/axios-server', function(req, res) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Headers', '*');
+    let obj = {a: 'ra', b: 'rb'};
+    res.send('hello axios===');
+    // setTimeout(() => {
+    //     res.send(JSON.stringify(obj));
+    // }, 5000);
+});
+
 app.listen('8000', () => {
     console.log('服务已经启动，8000 端口监听中……');
 });
