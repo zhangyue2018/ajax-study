@@ -52,6 +52,42 @@
             });
         }
 
+        btns[2].onclick = function() {
+            axios({
+                // 请求方法
+                method: 'POST',
+                // url
+                url: '/axios-server',
+                // 请求头
+                headers: {
+                    a: 100,
+                    b: 200
+                },
+                // 请求参数
+                params: {
+                    vip: 10,
+                    level: 30
+                },
+                // 请求体
+                data: {
+                    username: 'admin',
+                    password: 'admin'
+                }
+            }).then(res => {
+                console.log(res);
+                // 响应状态码
+                console.log(res.status);
+                // 相应状态字符串
+                console.log(res.statusText);
+                // 响应头
+                console.log(res.headers);
+                // 响应体
+                console.log(res.data);
+            });
+        }
+
+
+
     </script>
 </body>
 </html>
