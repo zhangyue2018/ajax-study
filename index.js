@@ -33,6 +33,14 @@ app.all('/timeout', function(req, res) {
     }, 7000);
 });
 
+app.all('/juery-server', function(req, res) {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Headers', '*');
+    let obj = {a: 'ra', b: 'rb'};
+    // res.send('hello ajax');
+    res.send(JSON.stringify(obj));
+});
+
 app.listen('8000', () => {
     console.log('服务已经启动，8000 端口监听中……');
 });
