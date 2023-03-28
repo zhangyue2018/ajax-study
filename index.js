@@ -38,7 +38,9 @@ app.all('/juery-server', function(req, res) {
     res.setHeader('Access-Control-Allow-Headers', '*');
     let obj = {a: 'ra', b: 'rb'};
     // res.send('hello ajax');
-    res.send(JSON.stringify(obj));
+    setTimeout(() => {
+        res.send(JSON.stringify(obj));
+    }, 5000);
 });
 
 app.listen('8000', () => {
